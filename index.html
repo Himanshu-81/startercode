@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Your Store</title>
+    <base
+      href="https://opencart.templatetrip.com/OPC07/OPC209_minimosa/OPC01/"
+    />
+    <meta name="description" content="My Store" />
+    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="catalog/view/javascript/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link
+      href="catalog/view/javascript/jquery/owl-carousel/owl.theme.default.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link
+      href="catalog/view/theme/OPC209_01/stylesheet/TemplateTrip/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link
+      href="catalog/view/theme/OPC209_01/stylesheet/stylesheet.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="catalog/view/javascript/jquery/swiper/css/swiper.min.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <script src="catalog/view/javascript/TemplateTrip/addonScript.js"></script>
+    <script src="catalog/view/javascript/TemplateTrip/ttcountdown.js"></script>
+
+    <script src="catalog/view/javascript/jquery/swiper/js/swiper.jquery.js"></script>
+  </head>
+
+  <body class="common-home">
+    <div id="page">
+      <div class="content-top">
+        <div class="slideshow-panel">
+          <div class="ttloading-bg ttloader"></div>
+          <div class="swiper-viewport">
+            <div id="slideshow0" class="slideshow-main swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide text-center">
+                  <a href="#">
+                    <img
+                      src="https://opencart.templatetrip.com/OPC07/OPC209_minimosa/OPC01/image/cache/catalog/demo/banners/slider-01-1903x1080.jpg"
+                      alt="slider-01"
+                      class="img-responsive"
+                    />
+                  </a>
+                </div>
+                <div class="swiper-slide text-center">
+                  <a href="#">
+                    <img
+                      src="https://opencart.templatetrip.com/OPC07/OPC209_minimosa/OPC01/image/cache/catalog/demo/banners/slider-02-1903x1080.jpg"
+                      alt="slider-02"
+                      class="img-responsive"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination slideshow0"></div>
+              <div class="swiper-pager">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          <!--
+
+          -->
+        </script>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var max_link = 4;
+        var moretext = "";
+        var items = $(".menu-category > ul.dropmenu > li.TT-Sub-List");
+        var surplus = items.slice(max_link, items.length);
+        surplus.wrapAll(
+          '<li class="dropdown more-menu TT-Sub-List"><div class="dropdown-menu"><ul class="list-unstyled childs_1 single-dropdown-menu"></div>'
+        );
+        $(".more-menu").prepend(
+          '<a href="#" class="level-top">' + moretext + "</a>"
+        );
+        if ($(window).width() > 992) {
+          $(".dropdown.more-menu .dropdown-menu li")
+            .addClass("TT-Sub-List1")
+            .removeClass("TT-Sub-List");
+        }
+        var ttcat_count = $(".more-menu ul > li.TT-Sub-List1 .CAT").length;
+        if (ttcat_count > 2) {
+          $(".more-menu > ul").addClass("tt-sub-auto");
+        }
+      });
+
+      $("#slideshow0").swiper({
+        mode: "horizontal",
+        slidesPerView: 1,
+        pagination: ".slideshow0",
+        paginationClickable: true,
+        nextButton: ".swiper-button-next",
+        prevButton: ".swiper-button-prev",
+        spaceBetween: 0,
+        autoplay: 5000,
+        autoplayDisableOnInteraction: true,
+        loop: true,
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
